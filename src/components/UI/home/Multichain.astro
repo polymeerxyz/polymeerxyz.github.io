@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import IconGlobe from "../../../assets/svgs/ic_globe.svg";
+---
+
+<div class="max-w-screen-xl m-auto mt-20">
+  <div
+    class="px-32 py-44 overflow-hidden rounded-3xl bg-slate-900 bg-[url('/images/multichain.png')] bg-no-repeat bg-[50%] bg-right"
+  >
+    <div class="section-multichain-content">
+      <div class="section-header">
+        <div class="text-white max-w-2xl flex flex-col gap-8">
+          <h2 class="text-5xl font-bold leading-tight">
+            Empower Multichain Crypto Use
+          </h2>
+          <div class="section-description-wrap">
+            <p class="text-xl leading-8 font-semibold">
+              Manage multiple seed phrases with only one master password.
+              SubWallet supports 150+ networks, 450+ tokens, and 80+ dApps.
+            </p>
+          </div>
+          <div class="block">
+            <a
+              class="inline-flex gap-2.5 bg-blue-600 px-9 py-3.5 rounded-full hover:shadow-[0_0_0_.2rem] hover:shadow-blue-600 transition-shadow duration-300 ease-in-out"
+            >
+              <span>
+                <Image src={IconGlobe} alt="Globe" width={23} height={24} />
+              </span>
+              <span class="text-base font-semibold">Explore Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

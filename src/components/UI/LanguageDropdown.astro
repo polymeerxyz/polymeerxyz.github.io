@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import IconUSA from "../../assets/svgs/ic_usa.svg";
+import IconDropdown from "../../assets/svgs/ic_drop_down.svg";
+---
+
+<div class="flex">
+  <button
+    id="states-button"
+    class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-white bg-inherit"
+    type="button"
+  >
+    <span class="pr-2.5">
+      <Image src={IconUSA} alt="USA" width={25} height={25} />
+    </span>
+    USA
+    <Image src={IconDropdown} alt="Dropdown" width={18} height={18} />
+  </button>
+  <div
+    id="dropdown-states"
+    class="z-10 hidden absolute transform-gpu translate-y-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+  >
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+      <li>
+        <button
+          type="button"
+          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+        >
+          <div class="inline-flex items-center">United States</div>
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+        >
+          <div class="inline-flex items-center">Germany</div>
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+        >
+          <div class="inline-flex items-center">Italy</div>
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+        >
+          <div class="inline-flex items-center">China</div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const dropdownStates = document.getElementById("dropdown-states");
+  const statesButton = document.getElementById("states-button");
+
+  if (!dropdownStates || !statesButton) {
+    console.log("Missing id for dropdown-states or states-button");
+  } else {
+    statesButton.addEventListener("click", () => {
+      console.log("clicked");
+
+      dropdownStates.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (!statesButton.contains(target) && !dropdownStates.contains(target)) {
+        dropdownStates.classList.add("hidden");
+        console.log("clicked outside");
+      }
+    });
+  }
+</script>

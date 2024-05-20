@@ -1,0 +1,153 @@
+---
+import { Image } from "astro:assets";
+import IconFolder from "../../../assets/svgs/ic_folder.svg";
+import IconIndependent from "../../../assets/svgs/ic_independent.svg";
+import IconLock from "../../../assets/svgs/ic_lock.svg";
+import IconKey from "../../../assets/svgs/ic_key.svg";
+import IconVerify from "../../../assets/svgs/ic_verify.svg";
+import IconSecurityCheck from "../../../assets/svgs/ic_security_check.svg";
+---
+
+<div class="my-32">
+  <div class="max-w-screen-xl m-auto text-white flex flex-col">
+    <div class="mb-16 flex flex-col gap-5">
+      <h2 class="text-white text-5xl leading-tight font-bold">
+        Where Your Security Is Prioritized
+      </h2>
+      <p class="w-1/2 text-slate-400 text-xl leading-8 font-semibold">
+        Security is at the center of everything we do. We uphold the core values
+        of Web3: privacy and self-custody.
+      </p>
+    </div>
+
+    <div class="section-content">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
+          <div class="flex gap-11">
+            <div class="min-w-[38px]">
+              <Image src={IconLock} alt="Lock" width={38} height={38} />
+            </div>
+            <div class="flex flex-col gap-5">
+              <h4 class="text-xl font-semibold">Non-custodial Wallet</h4>
+              <div class="text-slate-400 text-base font-medium">
+                Only you have access to your accounts, funds, private keys and
+                data. We cannot help you restore once they are lost.
+              </div>
+              <a
+                target="_blank"
+                href="#"
+                class="text-base font-semibold text-emerald-300"
+                >Read the docs</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
+          <div class="flex gap-11">
+            <div class="min-w-[38px]">
+              <Image src={IconVerify} alt="Verify" width={38} height={38} />
+            </div>
+            <div class="flex flex-col gap-5">
+              <h4 class="text-xl font-semibold">Respected User Privacy</h4>
+              <div class="text-slate-400 text-base font-medium">
+                We do not track any personal identifiable information, your
+                account addresses or asset balances.
+              </div>
+              <a
+                target="_blank"
+                href="#"
+                class="text-base font-semibold text-emerald-300"
+                >View our policy</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
+          <div class="flex gap-11">
+            <div class="min-w-[38px]">
+              <Image src={IconFolder} alt="Folder" width={38} height={38} />
+            </div>
+            <div class="flex flex-col gap-5">
+              <h4 class="text-xl font-semibold">Fully Open Source</h4>
+              <div class="text-slate-400 text-base font-medium">
+                As a Web3 project, we keep our GitHub open-sourced so that
+                anyone can audit our codes.
+              </div>
+              <a
+                target="_blank"
+                href="#"
+                class="text-base font-semibold text-emerald-300"
+                >Probe our GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
+          <div class="flex gap-11">
+            <div class="min-w-[38px]">
+              <Image
+                src={IconIndependent}
+                alt="Independent"
+                width={38}
+                height={38}
+              />
+            </div>
+            <div class="flex flex-col gap-5">
+              <h4 class="text-xl font-semibold">Independent Audit</h4>
+              <div class="text-slate-400 text-base font-medium">
+                We have officially passed independent security audit 02 times
+                and received certification.
+              </div>
+              <a
+                href="#"
+                target="_blank"
+                class="text-base font-semibold text-emerald-300"
+                >Check the reports</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
+          <div class="flex gap-11">
+            <div class="min-w-[38px]">
+              <Image src={IconKey} alt="Key" width={38} height={38} />
+            </div>
+            <div class="flex flex-col gap-5">
+              <h4 class="text-xl font-semibold">Cold Wallet Support</h4>
+              <div class="text-slate-400 text-base font-medium">
+                You can use Polkadot Vault, Ledger and Keystone with SubWallet
+                to better secure your assets.
+              </div>
+              <a
+                target="_blank"
+                href="#"
+                class="text-base font-semibold text-emerald-300"
+                >Read the docs</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
+          <div class="flex gap-11">
+            <div class="min-w-[38px]">
+              <Image src={IconSecurityCheck} alt="Key" width={38} height={38} />
+            </div>
+            <div class="flex flex-col gap-5">
+              <h4 class="text-xl font-semibold">Phishing Prevention</h4>
+              <div class="text-slate-400 text-base font-medium">
+                We have integrated phishing lists from Polkadot and ChainPatrol
+                to protect you from scams.
+              </div>
+              <a
+                target="_blank"
+                href="#"
+                class="text-base font-semibold text-emerald-300"
+                >Read the docs</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

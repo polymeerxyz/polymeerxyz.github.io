@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import ImgPolkadot from "../../../assets/polkadot.png";
+import ImgMoonbeam from "../../../assets/moonbeam.png";
+import ImgSubstrate from "../../../assets/substrate.png";
+import ImgBrave from "../../../assets/brave.png";
+import ImgChrome from "../../../assets/chrome.png";
+import ImgEdge from "../../../assets/edge.png";
+import ImgFirefox from "../../../assets/firefox.png";
+import IconGooglePlay from "../../../assets/svgs/ic_google_play.svg";
+import IconAppleStore from "../../../assets/svgs/ic_apple_store.svg";
+---
+
+<div class="pt-16">
+  <div class="max-w-screen-xl m-auto">
+    <div class="grid grid-cols-2">
+      <div class="flex gap-10 items-center">
+        <a class="button-image" href="#" target="_blank">
+          <Image src={ImgPolkadot} alt="Polkadot" width={204} height={49} />
+        </a>
+        <a class="button-image" href="#" target="_blank">
+          <Image src={ImgMoonbeam} alt="Moonbeam" width={191} height={45} />
+        </a>
+        <a class="button-image" href="#" target="_blank">
+          <Image src={ImgSubstrate} alt="Substrate" width={174} height={45} />
+        </a>
+      </div>
+      <div class="flex gap-10 justify-end items-center">
+        <div class="flex gap-10 items-center">
+          <a class="button-image">
+            <Image
+              src={IconAppleStore}
+              alt="AppStore"
+              width={163}
+              height={41}
+            />
+          </a>
+          <a class="button-image">
+            <Image
+              src={IconGooglePlay}
+              alt="GooglePlay"
+              width={150}
+              height={36}
+            />
+          </a>
+        </div>
+
+        <div class="flex gap-2.5 items-center">
+          <a class="button-image" href="#" target="_blank">
+            <Image src={ImgChrome} alt="Chrome" width={37} height={37} />
+          </a>
+          <a class="button-image" href="#" target="_blank">
+            <Image src={ImgBrave} alt="Brave" width={37} height={37} />
+          </a>
+          <a class="button-image" href="#" target="_blank">
+            <Image src={ImgFirefox} alt="FireFox" width={37} height={37} />
+          </a>
+          <a class="button-image" href="#" target="_blank">
+            <Image src={ImgEdge} alt="Edge" width={37} height={37} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

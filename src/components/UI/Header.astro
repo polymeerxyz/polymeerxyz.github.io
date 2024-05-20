@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/logo.jpg";
+import IconDownload from "../../assets/svgs/ic_download.svg";
+import DropdownComponent from "./LanguageDropdown.astro";
+
+const menuItems = [
+  {
+    title: "Overview",
+    link: "#",
+  },
+  {
+    title: "Security",
+    link: "#",
+  },
+  {
+    title: "Dotinsights",
+    link: "#",
+  },
+  {
+    title: "User guide",
+    link: "#",
+  },
+];
+---
+
+<header id="header" class="header w-full fixed z-50 backdrop-blur-sm">
+  <div class="max-w-screen-xl m-auto">
+    <div class="flex justify-between items-center py-5">
+      <div class="header-left">
+        <div class="site-branding">
+          <a id="logo">
+            <Image src={logo} alt="Logo" width={25} height={25} />
+          </a>
+        </div>
+      </div>
+      <div class="header-center">
+        <nav class="primary-menu">
+          <ul class="grid grid-cols-4 gap-4">
+            {
+              menuItems.map((item) => (
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-base font-semibold px-5 py-2.5"
+                    href={item.link}
+                  >
+                    <span class="nav-text text-base font-semibold text-white relative leading-7 pb-0.5 hover:after:w-full hover:after:left-0 hover:after:right-auto after:content-[''] after:w-0 after:h-[1px] after:absolute after:left-auto after:right-0 after:bottom-0 after:bg-white after:transition-[width_.6s_cubic-bezier(.25,.8,.25,1)_0s]">
+                      {item.title}
+                    </span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right flex items-center gap-2.5">
+        <DropdownComponent />
+        <a
+          id="download-button"
+          href=""
+          class="button flex gap-2.5 bg-black px-9 py-3 rounded-3xl border-solid border-2 border-black"
+        >
+          <span>
+            <Image src={IconDownload} alt="download" width={25} height={23} />
+          </span>
+          <span class="button-text text-base text-white font-semibold"
+            >Download</span
+          >
+        </a>
+        <!-- <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobile-menu"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav id="mobile-menu" class="mobile-menu menu_scr collapse">
+          <ul class="nav">
+            {
+              menuItems.map((item) => (
+                <li class="nav-item">
+                  <a class="nav-link" href={item.link}>
+                    <span class="nav-text">{item.title}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav> -->
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+  const header = document.getElementById("header");
+  const downloadButton = document.getElementById("download-button");
+
+  if (header) {
+    const sticky = header.offsetTop;
+    window.onscroll = function () {
+      if (window.scrollY > sticky) {
+        downloadButton?.classList.add(
+          "bg-blue-600",
+          "hover:shadow-blue-600",
+          "hover:shadow-[0_0_0_.2rem]",
+          "border-none"
+        );
+        downloadButton?.classList.remove("bg-black");
+        header.classList.add(
+          "bg-[linear-gradient(180deg,#0c0e12,rgba(12,14,18,.1))]"
+        );
+      } else {
+        downloadButton?.classList.remove(
+          "bg-blue-600",
+          "hover:shadow-blue-600",
+          "hover:shadow-[0_0_0_.2rem]",
+          "border-none"
+        );
+        downloadButton?.classList.add("bg-black");
+
+        header.classList.remove(
+          "bg-[linear-gradient(180deg,#0c0e12,rgba(12,14,18,.1))]"
+        );
+      }
+    };
+  }
+</script>
