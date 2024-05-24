@@ -1,7 +1,6 @@
 import starlight from "@astrojs/starlight";
-import { defineConfig } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,28 +9,39 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "My Docs",
+      customCss: ["./src/tailwind.css"],
       social: {
         twitter: "https://x.com/polymeer_xyz",
       },
       sidebar: [
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            {
-              label: "Example Guide",
-              link: "/guides/example/",
-            },
-          ],
+          label: "Introduction",
+          autogenerate: {
+            directory: "introduction",
+          },
         },
         {
-          label: "Reference",
+          label: "Background",
           autogenerate: {
             directory: "reference",
           },
         },
+        {
+          label: "Knowledge Base",
+          autogenerate: {
+            directory: "knowledge-base",
+          },
+        },
+        {
+          label: "About Us",
+          autogenerate: {
+            directory: "about-us",
+          },
+        },
       ],
     }),
-    tailwind(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
   ],
 });
