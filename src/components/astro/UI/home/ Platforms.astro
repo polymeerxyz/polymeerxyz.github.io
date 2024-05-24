@@ -1,40 +1,40 @@
 ---
 import { Image } from "astro:assets";
-import ImgAppstore from "../../../assets/appstore.png";
-import ImgBrave from "../../../assets/brave.png";
-import ImgChrome from "../../../assets/chrome.png";
-import ImgEdge from "../../../assets/edge.png";
-import ImgFirefox from "../../../assets/firefox.png";
-import ImgGoogleplay from "../../../assets/googleplay.png";
-import logo from "../../../assets/logo.jpg";
-import ImgTestFlight from "../../../assets/test-flight.png";
+import ImgAppstore from "../../../../assets/appstore.png";
+import ImgBrave from "../../../../assets/brave.png";
+import ImgChrome from "../../../../assets/chrome.png";
+import ImgEdge from "../../../../assets/edge.png";
+import ImgFirefox from "../../../../assets/firefox.png";
+import ImgGoogleplay from "../../../../assets/googleplay.png";
+import logo from "../../../../assets/logo.jpg";
+import ImgTestFlight from "../../../../assets/test-flight.png";
 ---
 
 <div
-  class="pt-36 bg-[url('/images/give-it-bg.png')] bg-cover bg-no-repeat bg-[50%]"
+  class="py-36 bg-[url('/images/give-it-bg.png')] bg-cover bg-no-repeat bg-[50%]"
 >
   <div class="max-w-screen-xl m-auto text-white flex flex-col gap-16">
     <div class="flex flex-col gap-5">
-      <h2 class="text-5xl font-bold">Give It A Try</h2>
-      <p class="text-xl font-semibold">
+      <h2 class="my-0 text-5xl font-bold">Give It A Try</h2>
+      <p class="my-0 text-xl font-semibold">
         One SubWallet. On multiple platforms: WebApp, Extension and Mobile.
       </p>
     </div>
 
     <div class="section-content">
       <div class="flex flex-col gap-16">
-        <div class="flex gap-8">
+        <div class="flex gap-8 items-center">
           <div class="flex flex-col gap-3 max-w-96">
-            <h4 class="text-xl font-semibold">Extension</h4>
+            <h4 class="my-0 text-xl font-semibold">Extension</h4>
             <div class="text-base font-semibold text-slate-400">
               Seamless access to all your Polkadot &amp; Ethereum assets from
               your browser.
             </div>
           </div>
-          <ul class="flex flex-wrap gap-5">
-            <li>
+          <ul class="pl-0 my-0 flex flex-wrap gap-5">
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -42,9 +42,9 @@ import ImgTestFlight from "../../../assets/test-flight.png";
                 Chrome
               </a>
             </li>
-            <li>
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -52,9 +52,9 @@ import ImgTestFlight from "../../../assets/test-flight.png";
                 Brave
               </a>
             </li>
-            <li>
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -62,9 +62,9 @@ import ImgTestFlight from "../../../assets/test-flight.png";
                 FireFox
               </a>
             </li>
-            <li>
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -74,17 +74,17 @@ import ImgTestFlight from "../../../assets/test-flight.png";
             </li>
           </ul>
         </div>
-        <div class="flex gap-8">
+        <div class="flex gap-8 items-center">
           <div class="flex flex-col gap-3 max-w-96">
-            <h4 class="text-xl font-semibold">Mobile</h4>
+            <h4 class="my-0 text-xl font-semibold">Mobile</h4>
             <div class="text-base font-semibold text-slate-400">
               Use your phone to explore Polkadot and Ethereum on the go!
             </div>
           </div>
-          <ul class="flex flex-wrap gap-5">
-            <li>
+          <ul class="pl-0 my-0 flex flex-wrap gap-5">
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -97,9 +97,9 @@ import ImgTestFlight from "../../../assets/test-flight.png";
                 App Store
               </a>
             </li>
-            <li>
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -112,9 +112,9 @@ import ImgTestFlight from "../../../assets/test-flight.png";
                 Google Play
               </a>
             </li>
-            <li>
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
                 target="_blank"
                 href="#"
               >
@@ -129,17 +129,17 @@ import ImgTestFlight from "../../../assets/test-flight.png";
             </li>
           </ul>
         </div>
-        <div class="flex gap-8">
+        <div class="flex gap-8 items-center">
           <div class="flex flex-col gap-3 max-w-96">
-            <h4 class="text-xl font-semibold">Web Dashboard</h4>
+            <h4 class="my-0 text-xl font-semibold">Web Dashboard</h4>
             <div class="text-base font-semibold text-slate-400">
               The one-stop dashboard to manage your assets with full control.
             </div>
           </div>
-          <ul class="flex flex-wrap gap-5">
-            <li>
+          <ul class="pl-0 my-0 flex flex-wrap gap-5">
+            <li class="list-none">
               <a
-                class="w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
+                class="no-underline text-white w-56 text-xl font-semibold flex items-center gap-2.5 p-5 py-4 rounded-lg bg-[rgba(255,255,255,0.08)]"
               >
                 <Image src={logo} alt="logo" width={40} height={40} />
                 SubWallet

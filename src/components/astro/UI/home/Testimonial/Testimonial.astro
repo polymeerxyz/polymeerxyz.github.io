@@ -1,12 +1,12 @@
 ---
-import Image from "astro/components/Image.astro";
-import logo from "../../../../assets/logo.jpg";
-import IconDownload from "../../../../assets/svgs/ic_download.svg";
-import IconHandshake from "../../../../assets/svgs/ic_handshake.svg";
-import IconNextBtn from "../../../../assets/svgs/ic_next_btn.svg";
-import IconPrevBtn from "../../../../assets/svgs/ic_prev_btn.svg";
-import IconTwitter from "../../../../assets/svgs/ic_twitter.svg";
-import { sliderData } from "./data.ts";
+import { Image } from "astro:assets";
+import logo from "../../../../../assets/logo.jpg";
+import IconDownload from "../../../../../assets/svgs/ic_download.svg";
+import IconHandshake from "../../../../../assets/svgs/ic_handshake.svg";
+import IconNextBtn from "../../../../../assets/svgs/ic_next_btn.svg";
+import IconPrevBtn from "../../../../../assets/svgs/ic_prev_btn.svg";
+import IconTwitter from "../../../../../assets/svgs/ic_twitter.svg";
+import { sliderData } from "./data";
 ---
 
 <div class="h-auto bg-[linear-gradient(180deg,#004bff,#4ceaac)] pt-36">
@@ -17,8 +17,8 @@ import { sliderData } from "./data.ts";
   <div class="flex flex-col max-w-screen-xl m-auto">
     <div class="section-header">
       <div class="flex flex-col gap-10 text-white text-center">
-        <h2 class="text-5xl font-bold">Web3 Natives Love SubWallet</h2>
-        <p class="text-xl font-semibold max-w-xl m-auto">
+        <h2 class="my-0 text-5xl font-bold">Web3 Natives Love SubWallet</h2>
+        <p class="my-0 text-xl font-semibold max-w-xl m-auto">
           We collaborate closely with our partners to ensure that you receive
           the best possible experience.
         </p>
@@ -26,7 +26,7 @@ import { sliderData } from "./data.ts";
           <a
             id="download-button"
             href=""
-            class="button flex gap-2.5 bg-black px-9 py-3 rounded-3xl border-solid border-2 border-black hover:shadow-black hover:shadow-[0_0_0_.2rem]"
+            class="no-underline button flex gap-2.5 bg-black px-9 py-3 rounded-3xl border-solid border-2 border-black hover:shadow-black hover:shadow-[0_0_0_.2rem]"
           >
             <span>
               <Image src={IconDownload} alt="download" width={25} height={23} />
@@ -36,7 +36,7 @@ import { sliderData } from "./data.ts";
             </span>
           </a>
           <a
-            class="button flex gap-2.5 bg-black px-9 py-3 rounded-3xl border-solid border-2 border-black hover:shadow-black hover:shadow-[0_0_0_.2rem]"
+            class="no-underline button flex gap-2.5 bg-black px-9 py-3 rounded-3xl border-solid border-2 border-black hover:shadow-black hover:shadow-[0_0_0_.2rem]"
             href="#"
           >
             <span>
