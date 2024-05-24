@@ -1,7 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import IconUSA from "../../assets/svgs/ic_usa.svg";
 import IconDropdown from "../../assets/svgs/ic_drop_down.svg";
+import IconUSA from "../../assets/svgs/ic_usa.svg";
+
+var test = "test";
+console.log(test);
 ---
 
 <div class="flex">
@@ -58,6 +61,8 @@ import IconDropdown from "../../assets/svgs/ic_drop_down.svg";
 </div>
 
 <script>
+  var test = "test";
+  console.log(test);
   const dropdownStates = document.getElementById("dropdown-states");
   const statesButton = document.getElementById("states-button");
 
