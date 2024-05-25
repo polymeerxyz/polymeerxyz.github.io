@@ -1,11 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import IconFolder from "../../../../assets/svgs/ic_folder.svg";
-import IconIndependent from "../../../../assets/svgs/ic_independent.svg";
-import IconKey from "../../../../assets/svgs/ic_key.svg";
-import IconLock from "../../../../assets/svgs/ic_lock.svg";
-import IconSecurityCheck from "../../../../assets/svgs/ic_security_check.svg";
-import IconVerify from "../../../../assets/svgs/ic_verify.svg";
+import {
+  ClipboardCheck,
+  FolderOpen,
+  LockKeyhole,
+  ShieldCheck,
+  Usb,
+  UserRoundCheck,
+} from "lucide-react";
 ---
 
 <div class="my-32">
@@ -25,7 +26,7 @@ import IconVerify from "../../../../assets/svgs/ic_verify.svg";
         <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
           <div class="flex gap-11">
             <div class="min-w-[38px]">
-              <Image src={IconLock} alt="Lock" width={38} height={38} />
+              <LockKeyhole size={38} color="white" client:visible />
             </div>
             <div class="flex flex-col gap-5">
               <h4 class="my-0 text-xl font-semibold">Non-custodial Wallet</h4>
@@ -45,7 +46,7 @@ import IconVerify from "../../../../assets/svgs/ic_verify.svg";
         <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
           <div class="flex gap-11">
             <div class="min-w-[38px]">
-              <Image src={IconVerify} alt="Verify" width={38} height={38} />
+              <UserRoundCheck size={38} color="white" client:visible />
             </div>
             <div class="flex flex-col gap-5">
               <h4 class="my-0 text-xl font-semibold">Respected User Privacy</h4>
@@ -65,7 +66,7 @@ import IconVerify from "../../../../assets/svgs/ic_verify.svg";
         <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
           <div class="flex gap-11">
             <div class="min-w-[38px]">
-              <Image src={IconFolder} alt="Folder" width={38} height={38} />
+              <FolderOpen size={38} color="white" client:visible />
             </div>
             <div class="flex flex-col gap-5">
               <h4 class="my-0 text-xl font-semibold">Fully Open Source</h4>
@@ -85,12 +86,7 @@ import IconVerify from "../../../../assets/svgs/ic_verify.svg";
         <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
           <div class="flex gap-11">
             <div class="min-w-[38px]">
-              <Image
-                src={IconIndependent}
-                alt="Independent"
-                width={38}
-                height={38}
-              />
+              <ClipboardCheck size={38} color="white" client:visible />
             </div>
             <div class="flex flex-col gap-5">
               <h4 class="my-0 text-xl font-semibold">Independent Audit</h4>
@@ -110,7 +106,7 @@ import IconVerify from "../../../../assets/svgs/ic_verify.svg";
         <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
           <div class="flex gap-11">
             <div class="min-w-[38px]">
-              <Image src={IconKey} alt="Key" width={38} height={38} />
+              <Usb size={38} color="white" client:visible />
             </div>
             <div class="flex flex-col gap-5">
               <h4 class="my-0 text-xl font-semibold">Cold Wallet Support</h4>
@@ -130,7 +126,7 @@ import IconVerify from "../../../../assets/svgs/ic_verify.svg";
         <div class="bg-gray-900 py-8 pl-12 pr-7 rounded-2xl">
           <div class="flex gap-11">
             <div class="min-w-[38px]">
-              <Image src={IconSecurityCheck} alt="Key" width={38} height={38} />
+              <ShieldCheck size={38} color="white" client:visible />
             </div>
             <div class="flex flex-col gap-5">
               <h4 class="my-0 text-xl font-semibold">Phishing Prevention</h4>

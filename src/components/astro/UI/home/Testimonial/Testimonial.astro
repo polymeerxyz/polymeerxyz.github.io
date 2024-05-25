@@ -1,11 +1,9 @@
 ---
 import { Image } from "astro:assets";
+import { ArrowBigLeft, ArrowBigRight, Download, Handshake } from "lucide-react";
 import logo from "../../../../../assets/logo.jpg";
-import IconDownload from "../../../../../assets/svgs/ic_download.svg";
-import IconHandshake from "../../../../../assets/svgs/ic_handshake.svg";
-import IconNextBtn from "../../../../../assets/svgs/ic_next_btn.svg";
-import IconPrevBtn from "../../../../../assets/svgs/ic_prev_btn.svg";
 import IconTwitter from "../../../../../assets/svgs/ic_twitter.svg";
+
 import { sliderData } from "./data";
 ---
 
@@ -29,7 +27,7 @@ import { sliderData } from "./data";
             class="no-underline button flex gap-2.5 bg-black px-9 py-3 rounded-3xl border-solid border-2 border-black hover:shadow-black hover:shadow-[0_0_0_.2rem]"
           >
             <span>
-              <Image src={IconDownload} alt="download" width={25} height={23} />
+              <Download size={25} color="white" client:visible />
             </span>
             <span class="button-text text-base text-white font-semibold">
               Download for free
@@ -40,7 +38,7 @@ import { sliderData } from "./data";
             href="#"
           >
             <span>
-              <Image src={IconHandshake} alt="Contact" width={25} height={23} />
+              <Handshake size={25} color="white" client:visible />
             </span>
             <span class="button-text text-base text-white font-semibold"
               >Contact to integrate</span
@@ -115,19 +113,19 @@ import { sliderData } from "./data";
         <div class="swiper-pagination-container">
           <div class="flex justify-end px-10 pt-5 gap-2">
             <div id="btn-prev-testimonial">
-              <Image
-                src={IconPrevBtn}
-                alt="Previous slide"
-                width={26}
-                height={26}
+              <ArrowBigLeft
+                className="bg-slate-800 rounded-full p-0.5"
+                size={26}
+                color="white"
+                client:visible
               />
             </div>
             <div id="btn-next-testimonial">
-              <Image
-                src={IconNextBtn}
-                alt="Next slide"
-                width={26}
-                height={26}
+              <ArrowBigRight
+                className="bg-slate-800 rounded-full p-0.5"
+                size={26}
+                color="white"
+                client:visible
               />
             </div>
           </div>

@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { ArrowBigLeft, ArrowBigRight, Download } from "lucide-react";
 import ImgScreen1 from "../../../../assets/features/Screen_1.png";
 import ImgScreen2 from "../../../../assets/features/Screen_2.png";
 import ImgScreen3 from "../../../../assets/features/Screen_3.png";
@@ -8,9 +9,6 @@ import ImgScreen5 from "../../../../assets/features/Screen_5.png";
 import ImgScreen6 from "../../../../assets/features/Screen_6.png";
 import ImgScreen7 from "../../../../assets/features/Screen_7.png";
 import ImgScreen8 from "../../../../assets/features/Screen_8.png";
-import IconDownload from "../../../../assets/svgs/ic_download.svg";
-import IconNextBtn from "../../../../assets/svgs/ic_next_btn.svg";
-import IconPrevBtn from "../../../../assets/svgs/ic_prev_btn.svg";
 
 const listImageFeatures = [
   ImgScreen1,
@@ -88,15 +86,20 @@ const listImageFeatures = [
     <div class="footer-features flex flex-col">
       <div class="flex justify-end px-10 pt-5 gap-2">
         <div id="btn-prev">
-          <Image
-            src={IconPrevBtn}
-            alt="Previous slide"
-            width={26}
-            height={26}
+          <ArrowBigLeft
+            className="bg-slate-800 rounded-full p-0.5"
+            size={26}
+            color="white"
+            client:visible
           />
         </div>
         <div id="btn-next">
-          <Image src={IconNextBtn} alt="Next slide" width={26} height={26} />
+          <ArrowBigRight
+            className="bg-slate-800 rounded-full p-0.5"
+            size={26}
+            color="white"
+            client:visible
+          />
         </div>
       </div>
       <div class="flex justify-center">
@@ -104,7 +107,7 @@ const listImageFeatures = [
           class="inline-flex gap-2.5 bg-blue-600 px-9 py-3.5 rounded-full hover:shadow-[0_0_0_.2rem] hover:shadow-blue-600 transition-shadow duration-300 ease-in-out"
         >
           <span>
-            <Image src={IconDownload} alt="download" width={25} height={23} />
+            <Download size={25} color="white" client:visible />
           </span>
           <span class="text-white text-base font-semibold"
             >Download SubWallet</span
